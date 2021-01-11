@@ -1,0 +1,65 @@
+Hello $str! from $namemap.firstname $namemap.lastname its $date
+
+
+year : $date.year
+month : $date.month
+day : $date.day
+
+#include ("turkeyMountain.vm", "turkeyMountain2.vm")
+
+#set($templateMsg = "this message is constructed on the template")
+$templateMsg
+
+#set($templateMsg2 = " to show concatination")
+$templateMsg$templateMsg2
+
+#set($templateMsg3 = " to show interpolation")
+#set($interpolated = "$templateMsg$templateMsg3")
+$interpolated
+
+#set($quote = '"')
+#set($address = "$namemap.firstname.$namemap.lastname@jbones.com")
+#set($link = "<a href=${quote}mailto:$address${quote}>$address</a>")
+mail me at $link
+
+#set($priceStr = "13.99")
+output without dollar sign \$priceStr = $priceStr
+output with dollar sign \$priceStr = $$priceStr
+
+#set($priceInt = 13)
+#set($priceInt2 = 2)
+#set($priceIntTotal = $priceInt + $priceInt2)
+output with integer math $$priceInt + $$priceInt2 = $$priceIntTotal
+
+including copyright.vm
+#include ("CopyRight.vm")
+
+including multiple vms
+#include ("CopyRight.vm","CopyRight.vm")
+
+parsing CompanyName.vm
+#parse("CompanyName.vm")
+
+#if($companyName == "jBones")
+   <h2>company name is camelhump format</h2>
+#elseif ($companyName == "jbones")
+   <h2>company name is lowercase format</h2>
+#elseif ($companyName == "Jbones")
+   <h2>company name is first capital format</h2>
+#else
+   <h2>we can't determine company name format</h2>
+#end
+
+#parse("ForEach.vm")
+
+#parse("NumberTool.vm")
+
+#parse("DateTool.vm")
+
+#parse("MathTool.vm")
+
+#parse("IteratorTool.vm")
+
+#parse("ToolBox.vm")
+
+date from Stripes ActionBean is $actionBean.date

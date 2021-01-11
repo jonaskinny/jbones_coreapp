@@ -1,0 +1,7 @@
+## from toolbox
+$cookie.add("jbones_cookie","jbones_cookie")
+#set($cookies = $cookie.getAll())
+
+#foreach ($ck in $cookies)
+   $ch.name=$ck.value<br>
+#end

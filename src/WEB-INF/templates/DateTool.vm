@@ -1,0 +1,8 @@
+Today's date is : $dateTool
+Today's date is also : $dateTool.long
+Today's dates is also : $dateTool.get('long')
+
+the passed in date is : $aDate
+
+formatted its ....
+medium : $dateTool.format('medium',$aDate)

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3_dtd'>
+
+<web-app>
+   <!-- CoreAppVelocityServlet -->
+   <servlet>
+      <servlet-name>CoreApp</servlet-name>
+      <servlet-class>org.jbones.coreapp.velocity.CoreAppVelocityViewServlet</servlet-class>
+         <init-param>
+            <param-name>org.apache.velocity.properties</param-name>
+            <param-value>/velocity.properties</param-value>
+         </init-param>
+         <init-param>
+            <param-name>org.apache.velocity.toolbox</param-name>
+            <param-value>/WEB-INF/toolbox.xml</param-value>
+         </init-param>
+   </servlet>
+   <servlet-mapping>
+      <servlet-name>CoreApp</servlet-name>
+      <url-pattern>/app/*</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>CoreApp</servlet-name>
+      <url-pattern>/CoreApp/*</url-pattern>
+   </servlet-mapping>
+</web-app>

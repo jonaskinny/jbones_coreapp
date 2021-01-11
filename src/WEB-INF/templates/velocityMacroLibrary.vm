@@ -1,0 +1,17 @@
+#macro (writeTable $itemList)
+   #set ($rowCount = 1)
+   #foreach($whatever in $itemList) 
+      #if ($rowCount % 2 == 0)
+         #set ($bgcolor = "#FFFFFF")
+      #else
+         #set ($bgcolor = "#CCCCCC")
+      #end
+      <tr>
+      <td> bgcolor="$bgcolor">$whatever.getId()</td>
+      <td> bgcolor="$bgcolor">$whatever.getName()</td>
+      </tr>
+      $whatever
+      $whatever.getId()
+      #set ($rowCount = $rowCount + 1)
+   #end
+#end

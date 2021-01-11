@@ -1,0 +1,9 @@
+to load the jbones_core test velocity webapp deploy to tomact using deploy_servlet.bat
+then start tomcat using C:\servers\apache-tomcat-6.0.16\bin\startup.bat
+then browse to http://localhost/manager/html to make sure jbones_core is deployed
+then browse to http://localhost/jbones_coreapp/CoreApp/view to see the velocity servlet
+
+additional request params are ...
+str
+
+http://localhost/jbones_coreapp/CoreApp/view/ANYTHING_CAN_GO_HERE_AS_IT_ALL_MAPS_TO_SAME_VIEW_SERVLET?str=hi

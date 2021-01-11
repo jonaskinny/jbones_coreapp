@@ -1,0 +1,7 @@
+Integer formatting : $numberTool.format("integer",$aNumber)
+Currency formatting : $numberTool.format("currency",$aNumber)
+Number formatting : $numberTool.format("number",$aNumber)
+Percentage formatting : $numberTool.format("percent",$aNumber)
+
+Currency with Local : $numberTool.format("currency",$aNumber,$aLocal)
+

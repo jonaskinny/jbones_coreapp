@@ -1,0 +1,8 @@
+#set($list = ["apple", "pear", "banana"])
+#set($items = $mill.wrap($list))
+
+#foreach($whatever in $items)
+   #if($velocityCount <= 3)
+      $items.more()
+   #end
+#end

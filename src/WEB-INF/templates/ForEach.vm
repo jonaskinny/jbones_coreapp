@@ -1,0 +1,21 @@
+#foreach ($item in $collection)
+   item = $item
+#end
+
+#foreach ($item in $collection2)
+   item = $item
+#end
+
+#foreach ($item in $orderedCollection)
+   item = $item
+#end
+
+#foreach ($item in [1 .. 5])
+   item index is $item
+#end
+
+#foreach ($item in $itemList)
+   item is $item
+#end
+
+#writeTable($itemList)

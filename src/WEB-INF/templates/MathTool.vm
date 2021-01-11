@@ -1,0 +1,12 @@
+$aMathNumber + 3.2 = $mathTool.add($aMathNumber, "3.2")
+$aMathNumber - 3.2 = $mathTool.sub($aMathNumber, "3.2")
+$aMathNumber / 3.2 = $mathTool.div($aMathNumber, "3.2")
+$aMathNumber * 3.2 = $mathTool.mul($aMathNumber, "3.2")
+$aMathNumber ^ 3.2 = $mathTool.pow($aMathNumber, "3.2")
+
+the minimum of $aMathNumber and 3.2 is $mathTool.min($aMathNumber, "3.2")
+the maximum of $aMathNumber and 3.2 is $mathTool.max($aMathNumber, "3.2")
+
+a randum number is $mathTool.random
+
+a random number between 1-20 is $mathTool.random(1,20)
